@@ -49,7 +49,7 @@ public class Retrouver_compte extends AppCompatActivity {
         button_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Retrouver_compte.this,login.class);
+                Intent intent = new Intent(Retrouver_compte.this,MainActivity.class);
                 startActivity(intent);
 
 

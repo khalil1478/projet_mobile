@@ -42,7 +42,7 @@ public class register extends AppCompatActivity {
         text_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(register.this,login.class);
+                Intent intent = new Intent(register.this,MainActivity.class);
                 startActivity(intent);
             }
         });
@@ -51,7 +51,7 @@ public class register extends AppCompatActivity {
         button_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(register.this,login.class);
+                Intent intent = new Intent(register.this,MainActivity.class);
                 startActivity(intent);
             }
         });
@@ -67,7 +67,7 @@ public class register extends AppCompatActivity {
             {
                 alert("email est déja existe");
             }
-            else if(input_password.getText().toString() != input_password_confirm.getText().toString())
+            else if(!input_password.getText().toString().equals(input_password_confirm.getText().toString()))
             {
                 alert("vérifier votre password");
             }

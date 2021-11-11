@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.InputType;
 import android.util.Log;
@@ -23,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
     MyDataBase db;
     Button btn_login;
     CheckBox show_password;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -86,7 +89,10 @@ public class MainActivity extends AppCompatActivity {
                 alert("user n'existe pas");
             }
             else{
-                alert("user existe");
+               // alert("user existe");
+                Intent intent = new Intent(MainActivity.this,home.class);
+                startActivity(intent);
+
             }
 
         });
